@@ -23,6 +23,15 @@
  *
  */
 
+// My goal for this project is to create a website that catalogs TV shows.
+// More specifically, I want it to be Transformers themed. A mixture of
+// IDW, Bayverse, and G1. I want to include a lot of information about each show.
+// For the splash page, I first want the factions of the Transformers to be listed.
+// Then when you click the faction, it will show which bots are in that faction
+// and some information about them. One feature I want is to be able to scroll horizontally
+// through the bots in a faction, and click on one to get more information about them.
+// Another feature I wa
+
 const FRESH_PRINCE_URL =
   "https://upload.wikimedia.org/wikipedia/en/3/33/Fresh_Prince_S1_DVD.jpg";
 const CURB_POSTER_URL =
