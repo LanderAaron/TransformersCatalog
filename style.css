@@ -129,7 +129,26 @@ body {
   justify-content: center;
 }
 
-.card img {
+.autobot-insignia {
+  width: 43px;
+  height: auto;
+  padding-bottom: 20px;
+}
+
+.decepticon-insignia {
+  width: 40px;
+  height: auto;
+  padding-bottom: 20px;
+}
+
+.title-bar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 10px;
+}
+
+.bot-image img {
   width: 100%;
   height: auto;
 }

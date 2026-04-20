@@ -34,39 +34,53 @@
 
 */
 
-const FRESH_PRINCE_URL =
-  "assets/optimus.jpg";
-const CURB_POSTER_URL =
-  "assets/megatron.jpg";
-const EAST_LOS_HIGH_POSTER_URL =
-  "assets/bumblebee.png";
-
 const transformersCatalog = [
   {
     name: "Optimus Prime",
     faction: "Autobots",
-    image: "https://upload.wikimedia.org/wikipedia/en/3/33/Fresh_Prince_S1_DVD.jpg"
+    image: "assets/optimus.jpg",
+    description: "Optimus Prime is the leader of the Autobots, a faction of transforming robots from the planet Cybertron. He is known for his strong sense of justice and his dedication to protecting humanity from the Decepticons."
   },
   {
     name: "Megatron",
     faction: "Decepticons",
-    image: "https://m.media-amazon.com/images/M/MV5BZDY1ZGM4OGItMWMyNS00MDAyLWE2Y2MtZTFhMTU0MGI5ZDFlXkEyXkFqcGdeQXVyMDc5ODIzMw@@._V1_FMjpg_UX1000_.jpg"
-  }
-];
+    image: "assets/megatron.jpg",
+    description: "Megatron is the leader of the Decepticons, a faction of transforming robots from the planet Cybertron. He is known for his ruthless ambition and his desire to conquer the universe."
 
-// This is an array of strings (TV show titles)
-let titles = [
-  "Optimus Prime",
-  "Megatron",
-  "Bumblebee",
-];
+    },
+    {
+      name: "Bumblebee",
+      faction: "Autobots",
+      image: "assets/bumblebee.png",
+      description: "Bumblebee is a member of the Autobots, a faction of transforming robots from the planet Cybertron. He is known for his bravery and his loyalty to Optimus Prime."
+    },
+    {
+      name: "Starscream",
+      faction: "Decepticons",
+      image: "assets/starscream.jpg",
+      description: "Starscream is a member of the Decepticons, a faction of transforming robots from the planet Cybertron. He is known for his treacherous nature and his desire to overthrow Megatron and become the leader of the Decepticons himself."
+    },
+    {
+      name: "Thundercracker",
+      faction: "Decepticons",
+      image: "assets/thundercracker.jpg",
+      description: "Thundercracker is a member of the Decepticons, a faction of transforming robots from the planet Cybertron. He is known for his speed and his ability to fly."
+    },
+    {
+      name: "Tailgate",
+      faction: "Autobots",
+      image: "assets/tailgate.jpg",
+      description: "Tailgate is a member of the Autobots, a faction of transforming robots from the planet Cybertron. He is known for his cheerful personality and his ability to transform into a compact car."
+    },
+    {
+      name: "Cyclonus",
+      faction: "Decepticons",
+      image: "assets/cyclonus.jpg",
+      description: "Cyclonus is a member of the Decepticons, a faction of transforming robots from the planet Cybertron. He is known for his loyalty to Galvatron and his ability to transform into a sleek jet."
+    }
 
-function transformerNames(name, faction, image, description) {
-  this.name = name;
-  this.faction = faction;
-  this.image = image;
-  this.description = description;
-}
+  ];
+
 // Your final submission should have much more data than this, and
 // you should use more than just an array of strings to store it all.
 
@@ -76,40 +90,36 @@ function showCards() {
   cardContainer.innerHTML = "";
   const templateCard = document.querySelector(".card");
 
-  for (let i = 0; i < titles.length; i++) {
-    let title = titles[i];
-
-    // This part of the code doesn't scale very well! After you add your
-    // own data, you'll need to do something totally different here.
-    let imageURL = "";
-    if (i == 0) {
-      imageURL = FRESH_PRINCE_URL;
-    } else if (i == 1) {
-      imageURL = CURB_POSTER_URL;
-    } else if (i == 2) {
-      imageURL = EAST_LOS_HIGH_POSTER_URL;
-    }
-
-    const nextCard = templateCard.cloneNode(true); // Copy the template card
-    editCardContent(nextCard, title, imageURL); // Edit title and image
-    cardContainer.appendChild(nextCard); // Add new card to the container
-  }
+  transformersCatalog.forEach((bot) => {
+    const nextCard = templateCard.cloneNode(true);
+    editCardContent(nextCard, bot);
+    cardContainer.appendChild(nextCard);
+  });
 }
 
-function editCardContent(card, newTitle, newImageURL) {
+function editCardContent(card, botData) {
   card.style.display = "block";
 
-  const cardHeader = card.querySelector("h2");
-  cardHeader.textContent = newTitle;
+  const cardHeader = card.querySelector(".bot-name");
+  const mainImage = card.querySelector(".bot-image");
+  const insigniaImage = card.querySelector(".insignia");
+  const description = card.querySelector(".description");
 
-  const cardImage = card.querySelector("img");
-  cardImage.src = newImageURL;
-  cardImage.alt = newTitle + " Poster";
+  cardHeader.textContent = botData.name;
+  mainImage.src = botData.image;
+  mainImage.alt = botData.name + " Profile Image";
+  description.textContent = botData.description;
 
-  // You can use console.log to help you debug!
-  // View the output by right clicking on your website,
-  // select "Inspect", then click on the "Console" tab
-  console.log("new card:", newTitle, "- html: ", card);
+  if (botData.faction === "Autobots") {
+    insigniaImage.src = "assets/autobot.png";
+    insigniaImage.alt = "Autobot Insignia";
+    insigniaImage.className = "autobot-insignia";
+
+  } else if (botData.faction === "Decepticons") {
+    insigniaImage.src = "assets/decepticon.png";
+    insigniaImage.alt = "Decepticon Insignia";
+    insigniaImage.className = "decepticon-insignia";
+  }
 }
 
 // This calls the addCards() function when the page is first loaded
