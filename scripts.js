@@ -23,28 +23,50 @@
  *
  */
 
-// My goal for this project is to create a website that catalogs TV shows.
-// More specifically, I want it to be Transformers themed. A mixture of
-// IDW, Bayverse, and G1. I want to include a lot of information about each show.
-// For the splash page, I first want the factions of the Transformers to be listed.
-// Then when you click the faction, it will show which bots are in that faction
-// and some information about them. One feature I want is to be able to scroll horizontally
-// through the bots in a faction, and click on one to get more information about them.
-// Another feature I wa
+/* Goals for this project:
+  1. Implement a sort alphabetically function
+    - Should show all bots in alphabetical order by name
+  2. Implement a filter by faction function
+    - Should show only bots from the faction selected by the user
+  3. Implement a search function that searches by name
+    - Should show bots and/or their descriptions that match the search query
+  4. Add more data for each bot and show data on separate box like Instagram posts on the website
+
+*/
 
 const FRESH_PRINCE_URL =
-  "https://upload.wikimedia.org/wikipedia/en/3/33/Fresh_Prince_S1_DVD.jpg";
+  "assets/optimus.jpg";
 const CURB_POSTER_URL =
-  "https://m.media-amazon.com/images/M/MV5BZDY1ZGM4OGItMWMyNS00MDAyLWE2Y2MtZTFhMTU0MGI5ZDFlXkEyXkFqcGdeQXVyMDc5ODIzMw@@._V1_FMjpg_UX1000_.jpg";
+  "assets/megatron.jpg";
 const EAST_LOS_HIGH_POSTER_URL =
-  "https://static.wikia.nocookie.net/hulu/images/6/64/East_Los_High.jpg";
+  "assets/bumblebee.png";
+
+const transformersCatalog = [
+  {
+    name: "Optimus Prime",
+    faction: "Autobots",
+    image: "https://upload.wikimedia.org/wikipedia/en/3/33/Fresh_Prince_S1_DVD.jpg"
+  },
+  {
+    name: "Megatron",
+    faction: "Decepticons",
+    image: "https://m.media-amazon.com/images/M/MV5BZDY1ZGM4OGItMWMyNS00MDAyLWE2Y2MtZTFhMTU0MGI5ZDFlXkEyXkFqcGdeQXVyMDc5ODIzMw@@._V1_FMjpg_UX1000_.jpg"
+  }
+];
 
 // This is an array of strings (TV show titles)
 let titles = [
-  "Fresh Prince of Bel Air",
-  "Curb Your Enthusiasm",
-  "East Los High",
+  "Optimus Prime",
+  "Megatron",
+  "Bumblebee",
 ];
+
+function transformerNames(name, faction, image, description) {
+  this.name = name;
+  this.faction = faction;
+  this.image = image;
+  this.description = description;
+}
 // Your final submission should have much more data than this, and
 // you should use more than just an array of strings to store it all.
 

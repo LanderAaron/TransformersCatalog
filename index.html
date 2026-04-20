@@ -1,7 +1,7 @@
 <!doctype html>
 <html>
   <head>
-    <title>LA TV Shows | Home</title>
+    <title>Iacon Archives | Bot Search</title>
     <meta name="description" content="A Catalog of Shows Set in Los Angeles" />
     <link rel="stylesheet" href="style.css" />
     <script type="text/javascript" src="scripts.js"></script>
@@ -9,23 +9,60 @@
 
   <body>
     <header class="main-header">
-      <h1 class="title">Iacon Database</h1>
+      <img class ="header-image" src="assets/iacon.jpg" alt="Iacon Government Logo"/>
+
+      <div class="nav-links">
+        <h2> All Topics and Services </h2>
+        <h2> Iacon and its government </h2>
+        <h2> Money and credit </h2>
+        <h2> Travel </h2>
+        <h2> Taxes </h2>
+      </div>
     </header>
+
+    <div class="header-wrapper-container">
+
+      <div class="search-container">
+        <input id="search-input" type="text" placeholder="Search for bot or attribute..." />
+
+        <button id="search-button" class="img-button">
+          <img src="assets/search.png" alt="Search Icon" />
+        </button>
+      </div>
+
+      <label for="sort">Sort by:</label>
+      <select name="sort-by" id="sort">
+        <option value="autobot">Autobots First</option>
+        <option value="decepticon">Decepticons First</option>
+        <option value="alphabetical">Alphabetical (A-Z)</option>
+        <option value="all" selected>All Bots</option>
+      </select>
+
+      <label for="filter">Filter by:</label>
+      <select name="filter-by" id="filter">
+        <option value="autobot">Autobot Only</option>
+        <option value="decepticon">Decepticon Only</option>
+        <option value="all" selected>Show All Bots</option>
+      </select>
+
+    </div> 
+
     <div id="card-container"></div>
+
     <div class="card" style="display: none">
       <div class="card-content">
-        <h2>TV Show Title</h2>
-        <img src="" alt="TV Show Poster" />
-        <ul>
-          <li>Bullet Point 1</li>
-          <li>Bullet Point 2</li>
-          <li>Bullet Point 3</li>
-        </ul>
-      </div>
+
+        <div class="card-header">
+          <h2 class="bot-name">Undefined Bot</h2>
+          <img class="insignia" src="assets/autobot.png" alt="Faction Insignia" />
+        </div>        
+      </div> 
     </div>
     <div class="footer">
-      <button onclick="quoteAlert()">Get A Quote!</button>
-      <button onclick="removeLastCard()">Remove A Card!</button>
+      <p>Iacon Archives is the official guide to Cybertronian information and services.</p>
+      <p> An official website of the Iacon City Government. </p>
+      <a href="https://www.youtube.com/watch?v=dQw4w9WgXcQ&list=RDdQw4w9WgXcQ&start_radio=1">Privacy Policy</a>
+      <a href="https://www.youtube.com/watch?v=glMsrAOctdU">Accessibility Policy</a>
     </div>
   </body>
 </html>
