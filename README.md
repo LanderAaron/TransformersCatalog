@@ -21,7 +21,7 @@ This repository contains the instructions, requirements, and starter code for St
 > 📝 **Note:**  
 > If you have not used GitHub or programmed a website with JavaScript before, that's OK! Part of the challenge is figuring out things you're not familiar with.
 
----
+
 
 ## ✅ Requirements - Your Catalog Website Should...
 

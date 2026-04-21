@@ -39,62 +39,238 @@ const transformersCatalog = [
     name: "Optimus Prime",
     faction: "Autobots",
     image: "assets/optimus.jpg",
-    description: "Optimus Prime is the leader of the Autobots, a faction of transforming robots from the planet Cybertron. He is known for his strong sense of justice and his dedication to protecting humanity from the Decepticons."
+    description:
+      "Optimus Prime is the leader of the Autobots, a faction of transforming robots from the planet Cybertron. He is known for his strong sense of justice and his dedication to protecting humanity from the Decepticons.",
   },
   {
     name: "Megatron",
     faction: "Decepticons",
     image: "assets/megatron.jpg",
-    description: "Megatron is the leader of the Decepticons, a faction of transforming robots from the planet Cybertron. He is known for his ruthless ambition and his desire to conquer the universe."
-
-    },
-    {
-      name: "Bumblebee",
-      faction: "Autobots",
-      image: "assets/bumblebee.png",
-      description: "Bumblebee is a member of the Autobots, a faction of transforming robots from the planet Cybertron. He is known for his bravery and his loyalty to Optimus Prime."
-    },
-    {
-      name: "Starscream",
-      faction: "Decepticons",
-      image: "assets/starscream.jpg",
-      description: "Starscream is a member of the Decepticons, a faction of transforming robots from the planet Cybertron. He is known for his treacherous nature and his desire to overthrow Megatron and become the leader of the Decepticons himself."
-    },
-    {
-      name: "Thundercracker",
-      faction: "Decepticons",
-      image: "assets/thundercracker.jpg",
-      description: "Thundercracker is a member of the Decepticons, a faction of transforming robots from the planet Cybertron. He is known for his speed and his ability to fly."
-    },
-    {
-      name: "Tailgate",
-      faction: "Autobots",
-      image: "assets/tailgate.jpg",
-      description: "Tailgate is a member of the Autobots, a faction of transforming robots from the planet Cybertron. He is known for his cheerful personality and his ability to transform into a compact car."
-    },
-    {
-      name: "Cyclonus",
-      faction: "Decepticons",
-      image: "assets/cyclonus.jpg",
-      description: "Cyclonus is a member of the Decepticons, a faction of transforming robots from the planet Cybertron. He is known for his loyalty to Galvatron and his ability to transform into a sleek jet."
-    }
-
-  ];
+    description:
+      "Megatron is the leader of the Decepticons, a faction of transforming robots from the planet Cybertron. He is known for his ruthless ambition and his desire to conquer the universe and destroy the Autobots.",
+  },
+  {
+    name: "Bumblebee",
+    faction: "Autobots",
+    image: "assets/bumblebee.png",
+    description:
+      "Bumblebee is a member of the Autobots, a faction of transforming robots from the planet Cybertron. He is known for his swiftness, bravery, and his loyalty to Optimus Prime.",
+  },
+  {
+    name: "Starscream",
+    faction: "Decepticons",
+    image: "assets/starscream.jpg",
+    description:
+      "Starscream is a member of the Decepticons, a faction of transforming robots from the planet Cybertron. Being a Seeker, he is known for his treacherous nature and his desire to overthrow Megatron and become the leader of the Decepticons himself. But fails every time.",
+  },
+  {
+    name: "Thundercracker",
+    faction: "Decepticons",
+    image: "assets/thundercracker.jpg",
+    description:
+      "Thundercracker is a member of the Decepticons, a faction of transforming robots from the planet Cybertron. He is one of the seekers and funnily owns a dog named Buster.",
+  },
+  {
+    name: "Tailgate",
+    faction: "Autobots",
+    image: "assets/tailgate.jpg",
+    description:
+      "Tailgate is a member of the Autobots, a faction of transforming robots from the planet Cybertron. He is known for his cheerful, clumsy, and naive personality. He is Cyclonus' Conjunx Endura (his true love).",
+  },
+  {
+    name: "Cyclonus",
+    faction: "Decepticons",
+    image: "assets/cyclonus.jpg",
+    description:
+      "Cyclonus is a member of the Decepticons, a faction of transforming robots from the planet Cybertron. In the Lost Light, he is known for his discipline, cold nature as a samurai. He is later to be Tailgate's Conjunx Endura (his true love).",
+  },
+  {
+    name: "Soundwave",
+    faction: "Decepticons",
+    image: "assets/soundwave.jpg",
+    description:
+      "Soundwave is a member of the Decepticons, a faction of transforming robots from the planet Cybertron. He is known for his unquestionable loyalty to Megatron and his role as his right-hand man.",
+  },
+  {
+    name: "Swerve",
+    faction: "Autobots",
+    image: "assets/swerve.jpg",
+    description:
+      "Swerve is a member of the Autobots, a faction of transforming robots from the planet Cybertron. He is known on the Lost Light to serve other bots drinks at his bar.",
+  }, 
+  {
+    name: "Knock Out",
+    faction: "Decepticons",
+    image: "assets/knockout.png",
+    description:
+      "Knock Out is a member of the Decepticons, a faction of transforming robots from the planet Cybertron. He is known for his vanity and obsession with his appearance, often prioritizing it over his duties. Is canonically confirmed to be one of the hottest bots alive.",
+  }, 
+  {
+    name: "Ratchet",
+    faction: "Autobots",
+    image: "assets/ratchet.jpg",
+    description:
+      "Ratchet is a member of the Autobots, a faction of transforming robots from the planet Cybertron. He is known for his medical expertise and serves as the chief medical officer for the Autobots.",
+  },
+  {
+    name: "Jetfire",
+    faction: "Autobots",
+    image: "assets/jetfire.png",
+    description:
+      "Jetfire is a member of the Autobots, a faction of transforming robots from the planet Cybertron. He is known for his aerial combat skills and his ability to transform into a jet. One of the biggest Autobots and was originally good friends with Starscream.",
+  },
+  {
+    name: "Shockwave",
+    faction: "Decepticons",
+    image: "assets/shockwave.png",
+    description:
+      "Shockwave is a member of the Decepticons, a faction of transforming robots from the planet Cybertron. He is known for his cold, calculating nature and his role as the Decepticons' chief scientist. One of the most powerful Decepticons and is infamously regarded as a Cybertronian war criminal for his experiments on other bots.",
+  },
+  {
+    name: "Whirl",
+    faction: "Autobots",
+    image: "assets/whirl.png",
+    description:
+      "Whirl is a member of the Autobots, a faction of transforming robots from the planet Cybertron. He is known for his eccentric and unpredictable behavior, as well as his unique transformation into a helicopter. He is also known for his love of music and often incorporates it into his combat style.",
+  },
+  {
+    name: "Megatronus Prime",
+    faction: "Decepticons",
+    image: "assets/megatronusprime.png",
+    description:
+      "Megatronus Prime is a member of the Decepticons, a faction of transforming robots from the planet Cybertron. He is known for being one of the original Thirteen Primes and is often associated with darkness and chaos. He is also known for his immense power and his role in the creation of the Decepticons.",
+  },
+  {
+    name: "Prima Prime",
+    faction: "Autobots",
+    image: "assets/primaprime.png",
+    description:
+      "Prima Prime is a member of the Autobots, a faction of transforming robots from the planet Cybertron. He is known for being one of the original Thirteen Primes and is often associated with leadership and wisdom. He is also known for his immense power and his role in the creation of the Autobots (art by Lantana_ice).",
+  },
+  {
+    name: "Breakdown",
+    faction: "Decepticons",
+    image: "assets/breakdown.png",
+    description:
+      "Breakdown is a member of the Decepticons, a faction of transforming robots from the planet Cybertron. He is known for his aggressive and violent nature, often serving as a ruthless enforcer for the Decepticons. He is also known for being Knock Out's partner in crime and actually showed sympathy for Vehicons and for Bulkhead, his archenemy.",
+  },
+  {
+    name: "Bulkhead",
+    faction: "Autobots",
+    image: "assets/bulkhead.png",
+    description:
+      "Bulkhead is a member of the Autobots, a faction of transforming robots from the planet Cybertron. He is known for his immense strength and durability, often serving as a powerful frontline fighter for the Autobots. He is also known for his kind-hearted nature. He is Breakdown's archenemy.",
+  },
+];
 
 // Your final submission should have much more data than this, and
 // you should use more than just an array of strings to store it all.
 
 // This function adds cards the page to display the data in the array
-function showCards() {
+function showCards(displayArray) {
   const cardContainer = document.getElementById("card-container");
   cardContainer.innerHTML = "";
   const templateCard = document.querySelector(".card");
 
-  transformersCatalog.forEach((bot) => {
+  displayArray.forEach((bot) => {
     const nextCard = templateCard.cloneNode(true);
     editCardContent(nextCard, bot);
     cardContainer.appendChild(nextCard);
   });
+}
+
+//Implementing a search function that will search through the bots' names and have other cards disappear if they don't match the search query. This will be done by adding an event listener to the search input field that listens for changes and then filters the display array based on the search query.
+function searchBots(query, displayArray) {
+  const searchResults = [];
+  searchResults.length = 0; // Clear the search results array
+  displayArray.forEach((bot) => {
+    if (bot.name.toLowerCase().includes(query.toLowerCase())) {
+      searchResults.push(bot);
+    }
+  });
+  return searchResults; // Refresh the display with search results
+}
+
+// Implementation will be manual instead of sort to demonstrate understanding of data structures and algorithms, as per project requirements
+function sortAlphabetically(displayArray) {
+  for (let i = 0; i < displayArray.length - 1; i++) {
+    for (let j = 0; j < displayArray.length - i - 1; j++) {
+      if (displayArray[j].name > displayArray[j + 1].name) {
+        // Swap the bots
+        const temp = displayArray[j];
+        displayArray[j] = displayArray[j + 1];
+        displayArray[j + 1] = temp;
+      }
+    }
+  }
+  return displayArray; // Refresh the display after sorting
+}
+
+// Implementing a sortByFaction function that will sort bots by their faction first whichever the user chose.
+function sortByFaction(displayArray) {
+  const autobots = [];
+  const decepticons = [];
+
+  displayArray.forEach((bot) => {
+    if (bot.faction === "Autobots") {
+      autobots.push(bot);
+    } else if (bot.faction === "Decepticons") {
+      decepticons.push(bot);
+    }
+  });
+  return [...autobots, ...decepticons]; // Combine the two arrays to maintain the original order within each faction
+}
+
+// Next is to add a manual filter by faction which should only show bots from the faction selected by user
+function filterbyFaction(faction, arrayToFilter) {
+  const filteredBots = []; // This array will hold the bots that match the filter criteria
+  filteredBots.length = 0; // Clear the filtered array
+  arrayToFilter.forEach((bot) => {
+    if (bot.faction === faction) {
+      filteredBots.push(bot);
+    }
+  });
+  return filteredBots; // Refresh the display with filtered results
+}
+
+// This function is supposed to fix any overlapping issues when using filter and sort together.
+function filterSortOverlap() {
+  let editableCatalog = [];
+  // Create a copy of the original catalog to preserve the default order
+  for (let i = 0; i < transformersCatalog.length; i++) {
+    editableCatalog.push({ ...transformersCatalog[i] });
+  }
+
+  const selectFilter = document.getElementById("filter").value;
+  if (selectFilter === "autobot") {
+    editableCatalog = filterbyFaction("Autobots", editableCatalog);
+  } else if (selectFilter === "decepticon") {
+    editableCatalog = filterbyFaction("Decepticons", editableCatalog);
+  }
+
+  const selectSort = document.getElementById("sort").value;
+  if (selectSort === "alphabetical") {
+    editableCatalog = sortAlphabetically(editableCatalog);
+  } else if (selectSort === "autobot") {
+    editableCatalog = sortByFaction(editableCatalog);
+  } else if (selectSort === "decepticon") {
+    editableCatalog = sortByFaction(editableCatalog).reverse(); 
+  }
+
+  const searchQuery = document.getElementById("search-input").value;
+  const searchEnter = document.getElementById("search-input");
+  const searchButton = document.getElementById("search-button");
+  searchButton.addEventListener("click", () => {
+    editableCatalog = searchBots(searchQuery, editableCatalog);
+    showCards(editableCatalog);
+  });
+  searchEnter.addEventListener("keypress", (event) => {
+    if (event.key === "Enter") {
+      searchButton.click();
+    }
+  });
+
+  showCards(editableCatalog);
 }
 
 function editCardContent(card, botData) {
@@ -114,7 +290,6 @@ function editCardContent(card, botData) {
     insigniaImage.src = "assets/autobot.png";
     insigniaImage.alt = "Autobot Insignia";
     insigniaImage.className = "autobot-insignia";
-
   } else if (botData.faction === "Decepticons") {
     insigniaImage.src = "assets/decepticon.png";
     insigniaImage.alt = "Decepticon Insignia";
@@ -123,16 +298,16 @@ function editCardContent(card, botData) {
 }
 
 // This calls the addCards() function when the page is first loaded
-document.addEventListener("DOMContentLoaded", showCards);
+document.addEventListener("DOMContentLoaded", () => {
+  showCards(transformersCatalog);
 
-function quoteAlert() {
-  console.log("Button Clicked!");
-  alert(
-    "I guess I can kiss heaven goodbye, because it got to be a sin to look this good!",
-  );
-}
+  // Call the filter and sort functions when the user selects one or both of the options from the dropdown menus. This will ensure that the display updates immediately after the user makes a selection.
+  const filterMenu = document.getElementById("filter");
+  filterMenu.addEventListener("change", filterSortOverlap); 
 
-function removeLastCard() {
-  titles.pop(); // Remove last item in titles array
-  showCards(); // Call showCards again to refresh
-}
+  const sortMenu = document.getElementById("sort");
+  sortMenu.addEventListener("change", filterSortOverlap);
+
+  const searchInput = document.getElementById("search-input");
+  searchInput.addEventListener("input", filterSortOverlap);
+});
